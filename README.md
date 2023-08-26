@@ -2,50 +2,49 @@
 
 1. Check if you have kubectl installed :
 
-    `kubectl --version`
+    <pre><code>kubectl --version</code></pre>
  
 2. Commands to execute a Pod and check if created successfully :
    
-     `kubectl create -f pod-definition.yml`
+     <pre><code>kubectl create -f pod-definition.yml</code></pre>
    
-     `kubectl get pods`
+     <pre><code>kubectl get pods</code></pre>
    
-     `kubectl describe pod myapp-pod`
+     <pre><code>kubectl describe pod myapp-pod</code></pre>
    
 4. Commands to execute a ReplicaSet and check if created successfully :
    
-     `kubectl create -f replicaset-definition.yaml`
+     <pre><code>kubectl create -f replicaset-definition.yaml</code></pre>
    
-     `kubectl get ReplicaSet`
+    <pre><code>kubectl get ReplicaSet</code></pre>
    
-    `kubectl replace -f replicaset-definition.yaml`
+    <pre><code>kubectl replace -f replicaset-definition.yaml</code></pre>
     
-    `kubectl scale --replica=6 -f replicaset-definition.yaml`
+    <pre><code>kubectl scale --replica=6 -f replicaset-definition.yaml</code></pre>
     
-    `kubectl scale  replicaset myapp-replicaset --replica=6 `
+   <pre><code>kubectl scale  replicaset myapp-replicaset --replica=6 </code></pre>
     
-    `kubectl delete replicaset myapp-replicase`
+   <pre><code>kubectl delete replicaset myapp-replicase</code></pre>
     
-    `kubectl edit replicaSet myapp-replicaset`
+   <pre><code>kubectl edit replicaSet myapp-replicaset</code></pre>
    
 6. Commands to execute Deployment and check if created successfully
    
-      `kubectl create -f deployment-definition.yaml`
+     <pre><code>kubectl create -f deployment-definition.yaml</code></pre>
    
-      `kubectl get Deployment`
+      <pre><code>kubectl get Deployment</code></pre>
       
-      `kubectl get ReplicaSet`
+      <pre><code>kubectl get ReplicaSet</code></pre>
       
-      `kubectl get pods`
+      <pre><code>kubectl get pods</code></pre>
       
-      `kubectl get all`
+      <pre><code>kubectl get all</code></pre>
       
-      `kubectl rollout status deployment/myapp-deployment`
+      <pre><code>kubectl rollout status deployment/myapp-deployment</code></pre>
    
-      `kubectl rollout history deployment/myapp-deployment`
+      <pre><code>kubectl rollout history deployment/myapp-deployment</code></pre>
    
-      `kubectl rollout undo deployment/myapp-deployment`
-      
+      <pre><code>kubectl rollout undo deployment/myapp-deployment</code></pre>
 
 
 
