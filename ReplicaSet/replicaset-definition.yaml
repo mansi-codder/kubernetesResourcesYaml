@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels: 
+    env: sim
+spec:
+  selector:
+    matchLabels:
+      env: sim
+  replicas: 3
+  template:
+    metadata:
+      name: myapp-pod
+      labels: 
+        env: sim
+    spec:
+      containers: 
+        - name: nginx-container
+          image: nginx
+          
