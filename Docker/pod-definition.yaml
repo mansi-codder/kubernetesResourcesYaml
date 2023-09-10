@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myubuntu-sleeper-pod
+  labels: 
+    env: sim
+spec:
+  containers: 
+    - name: myubuntu-sleeper-pod
+      image: ubuntu-sleeper
+      args:
+        - "10"
+      command:
+        - "sleep2.0"

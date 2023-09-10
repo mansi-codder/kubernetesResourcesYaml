@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-color
+  labels: 
+    env: sim
+spec:
+  serviceAccountName: build-robot
+  containers: 
+    - name: webapp-color
+      image: simple-webapp-color
+      ports:
+        - containerPort: 8081
+      envFrom:
+        - secretRef:
+            name: app-config

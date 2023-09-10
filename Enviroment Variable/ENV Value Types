@@ -1,0 +1,20 @@
+#write down directly in pod in spec section
+env:
+  - name: APP_COLOR
+    value: pink
+
+#retrieve from config map in pod in spec section
+  - name: APP_COLOR
+    valueFrom: 
+    configMapKeyRef:
+
+#retrieve from secret in pod in spec section
+  - name: APP_COLOR
+    valueFrom: 
+    secretKeyRef:
+
+
+envFrom:
+  - configMapKeyRef:
+      name: app-config
+      key: APP_COLOR
